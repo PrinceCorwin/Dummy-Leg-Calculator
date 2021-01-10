@@ -31,17 +31,15 @@ p {
 
 :-ms-input-placeholder {
   /* Internet Explorer 10-11 */
-  color: white;
+  color: red;
 }
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: white;
+  color: red;
 }
 
 body {
-  /* background-image: url("https://bl6pap003files.storage.live.com/y4mMirp6TCQ0HUj4R6EaxDHB2w7hoKw-sFJtmKD1qNz1BDTnh7u2CZERrdDRSqyDAoyN4WlAbSvBgvW3uJ1VvpylSggwILKOQz_t2eki5j-jOR6yo_OBLX47uBaCuGpGfajsUGkNSfq9kfac4gxqAgK0zzqFxO8d1bXeweNepczGs7ib_8IvHcyzFaMss9sndaY?width=7698&height=5132&cropmode=none"); */
-  /* background-size: cover; */
   background-color: var(--clr-midtone);
 }
 
