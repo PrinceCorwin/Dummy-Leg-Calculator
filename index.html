@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Dummy Leg Calculator</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jura:wght@500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target="#myNavbar"
+          >
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="">Piping Apps</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Dummy Leg</a></li>
+            <li class="my-links"><a href="">Trim Angle</a></li>
+            <li class="my-links"><a href="">Surface Area</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="#"
+                ><span class="glyphicon glyphicon-user"></span> About</a
+              >
+            </li>
+            <li>
+              <a href=""
+                ><span class="glyphicon glyphicon-envelope"></span> Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <main>
+      <div class="grid-container">
+        <div class="item1">
+          <form name="myForm" action="">
+            <div class="flex-wrap-row">
+              <div class="user-input-title">
+                <h2>HEADER</h2>
+                <div class="user-input">
+                  <label for="psize">NPS:</label>
+                  <input type="text" id="psize" name="psize" placeholder="3" />
+                </div>
+              </div>
+              <div class="user-input-title">
+                <h2>DUMMY LEG</h2>
+                <div class="user-input">
+                  <div>
+                    <label for="dsize">NPS:</label>
+                    <input
+                      type="text"
+                      id="dsize"
+                      name="dsize"
+                      placeholder="2"
+                    />
+                  </div>
+                  <div>
+                    <label for="dsched">SCHEDULE:</label>
+                    <select id="dsched" name="dsched">
+                      <option value="Std">Std</option>
+                      <option value="40">40</option>
+                      <option value="XS">XS</option>
+                      <option value="80">80</option>
+                      <option value="160">160</option>
+                      <option value="20">20</option>
+                      <option value="30">30</option>
+                      <option value="60">60</option>
+                      <option value="120">120</option>
+                      <option value="5s">5s</option>
+                      <option value="10s">10s</option>
+                      <option value="40s">40s</option>
+                      <option value="80s">80s</option>
+                    </select>
+                  </div>
+
+                  <label class="length-label"> "L" DIMENSION </label>
+                  <div>
+                    <input type="text" id="feet" name="feet" placeholder="ft" />
+                    <span class="dashdot"> - </span>
+                    <input
+                      type="text"
+                      id="inches"
+                      name="inches"
+                      placeholder="in"
+                    />
+                    <span class="dashdot">.</span>
+                    <input
+                      type="text"
+                      id="numer"
+                      name="numer"
+                      placeholder="X"
+                    />
+                    <div class="fraction-bar">/</div>
+                    <input
+                      type="text"
+                      id="denom"
+                      name="denom"
+                      placeholder="Y"
+                    />
+                  </div>
+                  <br />
+                  <input
+                    id="calculate"
+                    type="button"
+                    value="CALCULATE"
+                    onclick="myFunction()"
+                  />
+                  <div class="note">
+                    Red values are placeholders only. They have no value. You
+                    may leave them unchanged if the value is zero
+                  </div>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="item2">
+          <div class="tangent">COMMON CENTER</div>
+
+          <div class="answer">
+            <div class="pipe-img">
+              <img src="center.svg" alt="" />
+            </div>
+            <div class="cut-data">
+              <div class="output-title">LONG POINT</div>
+              <div class="output" id="center-lgpt">Output Here</div>
+              <div class="output-title">THROAT</div>
+              <div class="output" id="center-thrt">Output Here</div>
+            </div>
+          </div>
+        </div>
+        <div class="item3">
+          <div class="tangent">COMMON INSIDE</div>
+
+          <div class="answer">
+            <div class="pipe-img">
+              <img src="inside.svg" alt="" />
+            </div>
+            <div class="cut-data">
+              <div class="output-title">LONG POINT</div>
+              <div class="output" id="inside-lgpt">Output Here</div>
+              <div class="output-title">THROAT</div>
+              <div class="output" id="inside-thrt">Output Here</div>
+            </div>
+          </div>
+        </div>
+        <div class="item4">
+          <div class="tangent">COMMON OUTSIDE</div>
+
+          <div class="answer">
+            <div class="pipe-img">
+              <img src="outside.svg" alt="" />
+            </div>
+            <div class="cut-data">
+              <div class="output-title">LONG POINT</div>
+              <div class="output" id="outside-lgpt">Output Here</div>
+              <div class="output-title">THROAT</div>
+              <div class="output" id="outside-thrt">Output Here</div>
+            </div>
+          </div>
+        </div>
+        <div class="item5">
+          <div class="tangent tangent-text">90° TO HEADER</div>
+
+          <div class="answer">
+            <div class="pipe-img">
+              <img src="perp.svg" alt="" />
+            </div>
+            <div class="cut-data">
+              <div class="output-title">LONG POINT</div>
+              <div class="output" id="perp-lgpt">Output Here</div>
+              <div class="output-title">THROAT</div>
+              <div class="output" id="perp-thrt">Output Here</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
