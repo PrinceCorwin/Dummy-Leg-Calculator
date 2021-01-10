@@ -367,10 +367,6 @@ option:hover {
     grid-gap: 2rem;
     padding: 2rem 3rem 2rem 2rem;
   }
-  .flex-wrap-row {
-    display: flex;
-    justify-content: center;
-  }
   .user-input-title {
     margin-right: 10px;
     margin-left: 10px;

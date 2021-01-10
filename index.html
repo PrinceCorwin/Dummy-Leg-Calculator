@@ -58,81 +58,64 @@
       <div class="grid-container">
         <div class="item1">
           <form name="myForm" action="">
-            <div class="flex-wrap-row">
-              <div class="user-input-title">
-                <h2>HEADER</h2>
-                <div class="user-input">
-                  <label for="psize">NPS:</label>
-                  <input type="text" id="psize" name="psize" placeholder="3" />
-                </div>
+            <div class="user-input-title">
+              <h2>HEADER</h2>
+              <div class="user-input">
+                <label for="psize">NPS:</label>
+                <input type="text" id="psize" name="psize" placeholder="3" />
               </div>
-              <div class="user-input-title">
-                <h2>DUMMY LEG</h2>
-                <div class="user-input">
-                  <div>
-                    <label for="dsize">NPS:</label>
-                    <input
-                      type="text"
-                      id="dsize"
-                      name="dsize"
-                      placeholder="2"
-                    />
-                  </div>
-                  <div>
-                    <label for="dsched">SCHEDULE:</label>
-                    <select id="dsched" name="dsched">
-                      <option value="Std">Std</option>
-                      <option value="40">40</option>
-                      <option value="XS">XS</option>
-                      <option value="80">80</option>
-                      <option value="160">160</option>
-                      <option value="20">20</option>
-                      <option value="30">30</option>
-                      <option value="60">60</option>
-                      <option value="120">120</option>
-                      <option value="5s">5s</option>
-                      <option value="10s">10s</option>
-                      <option value="40s">40s</option>
-                      <option value="80s">80s</option>
-                    </select>
-                  </div>
+            </div>
+            <div class="user-input-title">
+              <h2>DUMMY LEG</h2>
+              <div class="user-input">
+                <div>
+                  <label for="dsize">NPS:</label>
+                  <input type="text" id="dsize" name="dsize" placeholder="2" />
+                </div>
+                <div>
+                  <label for="dsched">SCHEDULE:</label>
+                  <select id="dsched" name="dsched">
+                    <option value="Std">Std</option>
+                    <option value="40">40</option>
+                    <option value="XS">XS</option>
+                    <option value="80">80</option>
+                    <option value="160">160</option>
+                    <option value="20">20</option>
+                    <option value="30">30</option>
+                    <option value="60">60</option>
+                    <option value="120">120</option>
+                    <option value="5s">5s</option>
+                    <option value="10s">10s</option>
+                    <option value="40s">40s</option>
+                    <option value="80s">80s</option>
+                  </select>
+                </div>
 
-                  <label class="length-label"> "L" DIMENSION </label>
-                  <div>
-                    <input type="text" id="feet" name="feet" placeholder="ft" />
-                    <span class="dashdot"> - </span>
-                    <input
-                      type="text"
-                      id="inches"
-                      name="inches"
-                      placeholder="in"
-                    />
-                    <span class="dashdot">.</span>
-                    <input
-                      type="text"
-                      id="numer"
-                      name="numer"
-                      placeholder="X"
-                    />
-                    <div class="fraction-bar">/</div>
-                    <input
-                      type="text"
-                      id="denom"
-                      name="denom"
-                      placeholder="Y"
-                    />
-                  </div>
-                  <br />
+                <label class="length-label"> "L" DIMENSION </label>
+                <div>
+                  <input type="text" id="feet" name="feet" placeholder="ft" />
+                  <span class="dashdot"> - </span>
                   <input
-                    id="calculate"
-                    type="button"
-                    value="CALCULATE"
-                    onclick="myFunction()"
+                    type="text"
+                    id="inches"
+                    name="inches"
+                    placeholder="in"
                   />
-                  <div class="note">
-                    Red values are placeholders only. They have no value. You
-                    may leave them unchanged if the value is zero
-                  </div>
+                  <span class="dashdot">.</span>
+                  <input type="text" id="numer" name="numer" placeholder="X" />
+                  <div class="fraction-bar">/</div>
+                  <input type="text" id="denom" name="denom" placeholder="Y" />
+                </div>
+                <br />
+                <input
+                  id="calculate"
+                  type="button"
+                  value="CALCULATE"
+                  onclick="myFunction()"
+                />
+                <div class="note">
+                  Red values are placeholders only. They have no value. You may
+                  leave them unchanged if the value is zero
                 </div>
               </div>
             </div>
