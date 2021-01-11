@@ -54,8 +54,8 @@
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#"
-                ><span class="glyphicon glyphicon-user"></span> About</a
+              <a href="HelpIndex.html"
+                ><span class="glyphicon glyphicon-user"></span> Help</a
               >
             </li>
             <li>
@@ -78,7 +78,16 @@
               <h2>HEADER</h2>
               <div class="user-input">
                 <label for="psize">NPS:</label>
-                <input type="text" id="psize" name="psize" placeholder="3" />
+                <input
+                  type="number"
+                  step=".25"
+                  min=".5"
+                  max="48"
+                  id="psize"
+                  name="psize"
+                  placeholder="3"
+                /><span id="psizeInvalid"></span>
+                <div id="greater"></div>
               </div>
             </div>
             <div class="user-input-title">
@@ -86,7 +95,15 @@
               <div class="user-input">
                 <div>
                   <label for="dsize">NPS:</label>
-                  <input type="text" id="dsize" name="dsize" placeholder="2" />
+                  <input
+                    type="number"
+                    step=".25"
+                    min=".5"
+                    max="48"
+                    id="dsize"
+                    name="dsize"
+                    placeholder="2"
+                  /><span id="dsizeInvalid"></span>
                 </div>
                 <div>
                   <label for="dsched">SCHEDULE:</label>
@@ -106,22 +123,45 @@
                     <option value="80s">80s</option>
                   </select>
                 </div>
+                <div id="combo"></div>
 
                 <label class="length-label"> "L" DIMENSION </label>
-                <div>
-                  <input type="text" id="feet" name="feet" placeholder="ft" />
+                <div id="LdimInput">
+                  <input
+                    type="number"
+                    min="0"
+                    step="1"
+                    id="feet"
+                    name="feet"
+                    placeholder="ft"
+                  />
                   <span class="dashdot"> - </span>
                   <input
-                    type="text"
+                    type="number"
+                    min="0"
+                    step="1"
                     id="inches"
                     name="inches"
                     placeholder="in"
                   />
                   <span class="dashdot">.</span>
-                  <input type="text" id="numer" name="numer" placeholder="X" />
+                  <input
+                    type="number"
+                    id="numer"
+                    name="numer"
+                    placeholder="X"
+                  />
                   <div class="fraction-bar">/</div>
-                  <input type="text" id="denom" name="denom" placeholder="Y" />
+                  <input
+                    type="number"
+                    min="1"
+                    step="1"
+                    id="denom"
+                    name="denom"
+                    placeholder="Y"
+                  />
                 </div>
+                <div id="Lgreater"></div>
                 <br />
                 <input
                   id="calculate"
@@ -130,8 +170,8 @@
                   onclick="myFunction()"
                 />
                 <div class="note">
-                  Red values are placeholders only. They have no value. You may
-                  leave them unchanged if the value is zero
+                  Gray values are placeholders only. You may leave them
+                  unchanged if the value is zero
                 </div>
               </div>
             </div>

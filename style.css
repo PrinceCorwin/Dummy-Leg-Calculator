@@ -4,6 +4,17 @@
   box-sizing: border-box;
   color: var(--clr-contrast2);
 }
+/* get rid of arrows in number input */
+/* chrome, safari, edge, opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 
 body,
 h1,
@@ -25,7 +36,7 @@ p {
 }
 ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: red;
+  color: gray;
   opacity: 0.7;
 }
 
@@ -141,6 +152,7 @@ select,
 option {
   border-radius: 5px;
   background-color: var(--clr-contrast2);
+  transition: background-color 0.2s ease;
   padding-left: 0.5rem;
   font-size: 1.2vw;
   font-weight: bolder;
@@ -320,6 +332,22 @@ option:hover {
 #denom {
   vertical-align: text-top;
 }
+#psizeInvalid,
+#dsizeInvalid {
+  background-color: black;
+  border-radius: 3px;
+  margin-left: 2rem;
+  color: red;
+}
+#greater,
+#combo,
+#Lgreater {
+  color: red;
+  border-radius: 3px;
+  padding-left: 5px;
+  background-color: black;
+  font-size: 1.5rem;
+}
 @media screen and (max-width: 1140px) {
   .grid-container {
     height: 90vh;
@@ -402,6 +430,10 @@ option:hover {
   option {
     padding-left: 0.3rem;
     font-size: 2.8vw;
+  }
+  #psize,
+  #dsize {
+    width: 3em;
   }
   .user-input,
   .user-input-title > h2,

@@ -512,57 +512,65 @@ const pipeData = {
 var pipeArray = {};
 // onclick function to build pipeArray
 function myFunction() {
+  // clear error warnings
+  document.getElementById("dsizeInvalid").textContent = "";
+  document.getElementById("psizeInvalid").textContent = "";
+  document.getElementById("greater").textContent = "";
+  document.getElementById("combo").textContent = "";
+  document.getElementById("Lgreater").textContent = "";
+
   // validating correct input type
-  if (
-    pipeData[Number(document.getElementById("psize").value)] === undefined ||
-    pipeData[Number(document.getElementById("dsize").value)] === undefined
-  ) {
-    alert("That is not a valid NPS");
+  if (pipeData[Number(document.getElementById("psize").value)] === undefined) {
+    document.getElementById("psizeInvalid").textContent = "Invalid";
+    return;
+  }
+  if (pipeData[Number(document.getElementById("dsize").value)] === undefined) {
+    document.getElementById("dsizeInvalid").textContent = "Invalid";
     return;
   }
   if (
     Number(document.getElementById("dsize").value) >
     Number(document.getElementById("psize").value)
   ) {
-    alert("Header NPS must be equal to or greater than Dummy Leg NPS");
+    document.getElementById("greater").textContent = "Must be >= to Dummy NPS";
     return;
   }
-  const regex = new RegExp(/[^0-9,"."]/, "g");
-  const val = [
-    document.forms["myForm"]["psize"].value,
-    document.forms["myForm"]["dsize"].value,
-    document.forms["myForm"]["feet"].value,
-    document.forms["myForm"]["inches"].value,
-    document.forms["myForm"]["numer"].value,
-    document.forms["myForm"]["denom"].value,
-  ];
-  for (var i = 0; i < 6; i++) {
-    if (val[i].match(regex)) {
-      alert(
-        "All inputs must be a valid number (no letters, punctuation, or symbols. Decimal numbers ARE allowed (eg. 4.5))"
-      );
-      return;
-    }
-  }
+  // const regex = new RegExp(/[^0-9,"."]/, "g");
+  // const val = [
+  //   document.forms["myForm"]["psize"].value,
+  //   document.forms["myForm"]["dsize"].value,
+  //   document.forms["myForm"]["feet"].value,
+  //   document.forms["myForm"]["inches"].value,
+  //   document.forms["myForm"]["numer"].value,
+  //   document.forms["myForm"]["denom"].value,
+  // ];
+  // for (var i = 0; i < 6; i++) {
+  //   if (val[i].match(regex)) {
+  //     alert(
+  //       "All inputs must be a valid number (no letters, punctuation, or symbols. Decimal numbers ARE allowed (eg. 4.5))"
+  //     );
+  //     return;
+  //   }
+  // }
 
-  if (
-    document.getElementById("psize").value <= 0 ||
-    document.getElementById("dsize").value <= 0
-  ) {
-    alert("Header and Dummy Leg NPS must be greater than 0");
-    return;
-  }
+  // if (
+  //   document.getElementById("psize").value <= 0 ||
+  //   document.getElementById("dsize").value <= 0
+  // ) {
+  //   alert("Header and Dummy Leg NPS must be greater than 0");
+  //   return;
+  // }
   if (
     pipeData[document.getElementById("dsize").value].wall[
       document.getElementById("dsched").value
     ] === undefined
   ) {
-    alert("Dummy Leg / Schedule combination is not available.");
+    document.getElementById("combo").textContent =
+      "NPS/SCH combination not valid";
     return;
   }
   // build pipeArray object
   pipeArray.pNom = Number(document.getElementById("psize").value);
-  console.log(pipeArray.pNom);
   pipeArray.dNom = Number(document.getElementById("dsize").value);
 
   pipeArray.dSched = document.getElementById("dsched").value;
@@ -575,7 +583,7 @@ function myFunction() {
   //   console.log tests
   lengthInDecimalInches();
   if (pipeArray.L <= 0) {
-    alert("'L' Dimension must be greater than 0");
+    document.getElementById("Lgreater").textContent = "L must be > 0";
     return;
   }
   center();
