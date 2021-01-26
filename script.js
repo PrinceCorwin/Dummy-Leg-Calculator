@@ -67,7 +67,7 @@ const pipeData = {
       XXS: "0.382",
     },
   },
-  1.50: {
+  1.5: {
     od: "1.90",
     wall: {
       5: "0.065",
@@ -707,7 +707,7 @@ function amerStand(L) {
   feetAndInches();
   function funcFraction() {
     L = L - parseInt(L);
-    fraction = Math.round(parseInt(L * 16)) + "/" + "16";
+    fraction = Math.round(L * 16) + "/" + "16";
     if (fraction === "2/16") {
       fraction = "1/8";
     } else if (fraction === "4/16") {
