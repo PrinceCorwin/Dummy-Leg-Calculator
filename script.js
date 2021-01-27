@@ -640,9 +640,9 @@ function center() {
   let height = 0.5 * pipeArray.dId + pipeArray.pR;
   let takeOff = Math.sqrt(pipeArray.pOR * pipeArray.pOR - height * height);
   let lgpt = pipeArray.L + (pipeArray.pR - takeOff);
-  console.log("lgpt: " + lgpt);
-  console.log("height: " + height);
-  console.log(pipeArray);
+  // console.log("lgpt: " + lgpt);
+  // console.log("height: " + height);
+  // console.log(pipeArray);
   pipeArray.centerLgpt = amerStand(lgpt);
 
   //   throat
@@ -691,8 +691,8 @@ function perp() {
 
   //   throat
   let thrt = pipeArray.L - 0.5 * pipeArray.pOd;
-  console.log("pOd: " + pipeArray.pOd);
-  console.log("perpthrt: " + thrt);
+  // console.log("pOd: " + pipeArray.pOd);
+  // console.log("perpthrt: " + thrt);
   pipeArray.perpThrt = amerStand(thrt);
 }
 
@@ -753,6 +753,6 @@ function amerStand(L) {
   } else {
     standardL = parseInt(feet) + "'-" + parseInt(inches) + "." + fraction + '"';
   }
-  console.log(feet, inches, fraction);
+  // console.log(feet, inches, fraction);
   return standardL;
 }
