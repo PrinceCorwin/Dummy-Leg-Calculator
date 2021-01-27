@@ -738,7 +738,10 @@ function amerStand(L) {
       feet = Number.parseInt(tempL / 12);
     }
   }
-
+  if (fraction === "16/16") {
+    fraction = "0";
+    inches++;
+  }
   if (feet === 0 && inches === 0) {
     standardL = fraction + '"';
   } else if (feet === 0 && fraction === 0) {
