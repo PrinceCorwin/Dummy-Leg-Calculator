@@ -744,6 +744,10 @@ function amerStand(L) {
     fraction = "0";
     inches++;
   }
+  if (inches === 12) {
+    inches = 0;
+    feet++;
+  }
   if (feet === 0 && inches === 0) {
     standardL = fraction + '"';
   } else if (feet === 0 && fraction === 0) {
