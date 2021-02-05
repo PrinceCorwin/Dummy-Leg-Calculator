@@ -431,7 +431,7 @@ option:hover {
     margin-right: 10px;
     margin-left: 10px;
   }
-  /* input,
+  input,
   select,
   option {
     padding-left: 0.5rem;
@@ -447,7 +447,7 @@ option:hover {
   }
   .dashdot {
     font-size: 5vw;
-  } */
+  }
 }
 
 @media screen and (max-width: 900px) {
