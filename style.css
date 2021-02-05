@@ -57,7 +57,7 @@ nav {
 #gallery {
   background-color: black;
   padding: 0 20px 0 20px;
-  font-size: 24px;
+  /* font-size: 24px; */
   display: flex;
   color: white;
   list-style: none;
@@ -79,7 +79,7 @@ nav {
   /* background-color: red; */
   color: white;
   text-decoration: none;
-  font-size: 16px;
+  /* font-size: 16px; */
   padding: 7px 15px;
 
   border: 2px solid var(--clr-contrast1);
@@ -149,7 +149,7 @@ nav {
 .grid-container {
   /* height: 90vh; */
   display: grid;
-  grid-template-columns: 1.1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   grid-template-areas: "input center inside outside perp";
   grid-gap: 2rem;
@@ -173,7 +173,7 @@ nav {
   font-family: var(--ff-primary);
 
   text-align: left;
-  font-size: 1.4vw;
+  /* font-size: 1.4vw; */
 }
 label {
   color: var(--clr-contrast2);
@@ -190,7 +190,7 @@ option {
   background-color: var(--clr-contrast2);
   transition: background-color 0.2s ease;
   padding-left: 0.5rem;
-  font-size: 1.2vw;
+  font-size: 1rem;
   /* font-weight: bold; */
   color: black;
   margin-bottom: 1rem;
@@ -204,7 +204,7 @@ option:hover {
 
 .user-input {
   padding-top: 1rem;
-  font-size: 1.4vw;
+  font-size: 1rem;
 }
 .length-label {
   margin-top: 1.5rem;
@@ -223,12 +223,12 @@ option:hover {
   box-shadow: -5px -5px 10px var(--clr-light), 5px 5px 10px #00526a;
 }
 #page-title {
-  font-size: 1.2vw;
+  font-size: 1.2rem;
   padding: 1rem 2rem 1rem 2rem;
 }
 .user-input-title > h2 {
   color: var(--clr-contrast2);
-  font-size: 1.6vw;
+  font-size: 1.2rem;
   border: 2px solid var(--clr-contrast1);
   border-radius: 5px;
   width: fit-content;
@@ -244,7 +244,7 @@ option:hover {
   font-size: 1rem;
 }
 .dashdot {
-  font-size: 2vw;
+  font-size: 1.5rem;
 }
 .note {
   margin-top: 1rem;
@@ -280,7 +280,7 @@ option:hover {
   /* background-color: black; */
 }
 .output-title {
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
   border-radius: 5px;
   padding: 0.5rem 0 0.5rem 1rem;
@@ -292,7 +292,7 @@ option:hover {
   margin-bottom: 2rem;
   background-color: var(--clr-midtone);
   box-shadow: inset -4px -4px 7px var(--clr-light), inset 4px 4px 7px #00526a;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   font-weight: bolder;
   letter-spacing: 0.4rem;
 }
@@ -351,8 +351,8 @@ option:hover {
 #numer,
 #denom {
   border-radius: 50%;
-  width: 1.7rem;
-  font-size: 1.2rem;
+  width: 1.5rem;
+  font-size: 1rem;
   text-align: center;
   padding: 0;
 }
@@ -392,13 +392,13 @@ option:hover {
     grid-gap: 2rem;
     padding: 2rem 3rem 2rem 2rem;
   }
-  input,
+  /* input,
   select,
   option {
     padding-left: 0.5rem;
     font-size: 2vw;
-  }
-  .user-input,
+  } */
+  /* .user-input,
   .user-input-title > h2,
   .output-title,
   .output,
@@ -410,16 +410,9 @@ option:hover {
   }
   .dashdot {
     font-size: 3vw;
-  }
+  } */
 }
-@media screen and (max-width: 740px) {
-  input,
-  select,
-  option {
-    padding-left: 0.3rem;
-  }
-}
-@media screen and (max-width: 620px) {
+@media screen and (max-width: 800px) {
   .grid-container {
     height: 90vh;
     display: grid;
@@ -438,7 +431,7 @@ option:hover {
     margin-right: 10px;
     margin-left: 10px;
   }
-  input,
+  /* input,
   select,
   option {
     padding-left: 0.5rem;
@@ -454,29 +447,10 @@ option:hover {
   }
   .dashdot {
     font-size: 5vw;
-  }
-}
-@media screen and (max-width: 425px) {
-  input,
-  select,
-  option {
-    padding-left: 0.3rem;
-    font-size: 2.8vw;
-  }
-  #psize,
-  #dsize {
-    width: 3em;
-  }
-  .user-input,
-  .user-input-title > h2,
-  .output-title,
-  .output,
-  .tangent {
-    font-size: 4vw;
-  }
+  } */
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .line {
     width: 30px;
     height: 3px;
@@ -520,10 +494,7 @@ option:hover {
     height: 20%;
     border: none;
   }
-  /* #contact {
-    margin-left: 0;
-    padding-bottom: 10px;
-  } */
+
   .nav-links.open {
     clip-path: circle(1000px at 90% -10%);
     -webkit-clip-path: circle(1000px at 90% -10%);
@@ -549,10 +520,7 @@ option:hover {
     margin-left: 0;
     width: 100%;
   }
-  #contact,
-  #help {
-    border: none;
-  }
+
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
   }
