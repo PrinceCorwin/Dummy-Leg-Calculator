@@ -455,7 +455,7 @@ option:hover {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .line {
     width: 30px;
     height: 3px;
