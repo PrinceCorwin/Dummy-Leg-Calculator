@@ -1,3 +1,4 @@
+// navbar script
 const hamburger = document.querySelector(".hamburger");
 const navLinks = document.querySelector(".nav-links");
 const links = document.querySelectorAll(".nav-links li");
@@ -9,6 +10,7 @@ hamburger.addEventListener("click", () => {
   });
 });
 
+// pipeData object
 const pipeData = {
   0.5: {
     od: 0.84,
@@ -524,7 +526,7 @@ const pipeData = {
 };
 var pipeArray = {};
 // onclick function to build pipeArray
-function myFunction() {
+function dummyLeg() {
   // clear error warnings
   document.getElementById("dsizeInvalid").textContent = "";
   document.getElementById("psizeInvalid").textContent = "";
