@@ -525,7 +525,10 @@ option:hover {
     margin-left: 0;
     width: 100%;
   }
-
+  #psize,
+  #dsize {
+    width: 3rem;
+  }
   .nav-links li:nth-child(1) {
     transition: all 0.5s ease 0.2s;
   }
