@@ -10,6 +10,24 @@ hamburger.addEventListener("click", () => {
   });
 });
 
+// event listener for help and hide images buttons
+let imgVisibility = "show";
+$("#help-btn").click(function () {
+  $("#help").toggle();
+});
+$(".fa-times-circle").click(function () {
+  $("#help").toggle();
+});
+$("#hide-btn").click(function () {
+  if (imgVisibility === "show") {
+    $("#hide-btn-txt").text("Show Images");
+    imgVisibility = "hide";
+  } else {
+    $("#hide-btn-txt").text("Hide Images");
+    imgVisibility = "show";
+  }
+  $(".pipe-img").toggle();
+});
 // pipeData object
 const pipeData = {
   0.5: {
