@@ -568,31 +568,7 @@ function dummyLeg() {
     document.getElementById("greater").textContent = "Must be >= to Dummy NPS";
     return;
   }
-  // const regex = new RegExp(/[^0-9,"."]/, "g");
-  // const val = [
-  //   document.forms["myForm"]["psize"].value,
-  //   document.forms["myForm"]["dsize"].value,
-  //   document.forms["myForm"]["feet"].value,
-  //   document.forms["myForm"]["inches"].value,
-  //   document.forms["myForm"]["numer"].value,
-  //   document.forms["myForm"]["denom"].value,
-  // ];
-  // for (var i = 0; i < 6; i++) {
-  //   if (val[i].match(regex)) {
-  //     alert(
-  //       "All inputs must be a valid number (no letters, punctuation, or symbols. Decimal numbers ARE allowed (eg. 4.5))"
-  //     );
-  //     return;
-  //   }
-  // }
 
-  // if (
-  //   document.getElementById("psize").value <= 0 ||
-  //   document.getElementById("dsize").value <= 0
-  // ) {
-  //   alert("Header and Dummy Leg NPS must be greater than 0");
-  //   return;
-  // }
   if (
     pipeData[document.getElementById("dsize").value].wall[
       document.getElementById("dsched").value
@@ -673,9 +649,7 @@ function center() {
   let height = 0.5 * pipeArray.dId + pipeArray.pR;
   let takeOff = Math.sqrt(pipeArray.pOR * pipeArray.pOR - height * height);
   let lgpt = pipeArray.L + (pipeArray.pR - takeOff);
-  // console.log("lgpt: " + lgpt);
-  // console.log("height: " + height);
-  // console.log(pipeArray);
+
   pipeArray.centerLgpt = amerStand(lgpt);
 
   //   throat
@@ -724,8 +698,7 @@ function perp() {
 
   //   throat
   let thrt = pipeArray.L - 0.5 * pipeArray.pOd;
-  // console.log("pOd: " + pipeArray.pOd);
-  // console.log("perpthrt: " + thrt);
+
   pipeArray.perpThrt = amerStand(thrt);
 }
 
@@ -790,6 +763,6 @@ function amerStand(L) {
   } else {
     standardL = parseInt(feet) + "'-" + parseInt(inches) + "." + fraction + '"';
   }
-  // console.log(feet, inches, fraction);
+
   return standardL;
 }
